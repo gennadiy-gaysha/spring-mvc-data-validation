@@ -21,7 +21,7 @@
                 <!--display the error messages associated with the firstName field-->
                 <span th:if="${#fields.hasErrors('firstName')}"
                       th:errors="*{firstName}"
-                      class="--bs-danger"
+                      class="text-danger"
                 ></span>
             </div>
             <div class="mb-3">
@@ -30,7 +30,7 @@
                        id="customerLastName" placeholder="Input customer's last name">
                 <span th:if="${#fields.hasErrors('lastName')}"
                       th:errors="*{lastName}"
-                      class="--bs-danger"
+                      class="text-danger"
                 ></span>
             </div>
             <button type="submit" class="btn btn-primary mt-3">Submit</button>
