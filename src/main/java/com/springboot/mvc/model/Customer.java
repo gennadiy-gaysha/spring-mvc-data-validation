@@ -25,5 +25,5 @@ public class Customer {
 
     @Min(value = 0, message="must be greater than or equal to zero")
     @Max(value = 10, message = "must be less than or equal to 10")
-    private int freePasses;
+    private Integer freePasses;
 }

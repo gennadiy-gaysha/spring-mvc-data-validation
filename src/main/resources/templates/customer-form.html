@@ -24,6 +24,7 @@
                       class="text-danger"
                 ></span>
             </div>
+
             <div class="mb-3">
                 <label for="customerLastName" class="form-label">Last name(*)</label>
                 <input type="text" th:field="*{lastName}" class="form-control"
@@ -33,6 +34,17 @@
                       class="text-danger"
                 ></span>
             </div>
+
+            <div class="mb-3">
+                <label for="customerFreePasses" class="form-label">Free passes(*)</label>
+                <input type="text" th:field="*{freePasses}" class="form-control"
+                       id="customerFreePasses" placeholder="Input the number of free passes">
+                <span th:if="${#fields.hasErrors('freePasses')}"
+                      th:errors="*{freePasses}"
+                      class="text-danger"
+                ></span>
+            </div>
+
             <button type="submit" class="btn btn-primary mt-3">Submit</button>
         </form>
     </div>
