@@ -19,7 +19,7 @@ public class CustomerController {
     // if String only has white spaces trims it to null
     // Add support for @InitBinder and StringTrimmerEditor
     @InitBinder
-    public void initBinder(WebDataBinder dataBinder){
+    public void initBinder(WebDataBinder dataBinder) {
         StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
         dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
     }
@@ -40,9 +40,9 @@ public class CustomerController {
         // debug whitespaces in the lastName
         System.out.println("Last name: |" + theCustomer.getLastName() + "|");
 
-        if(theBindingResult.hasErrors()){
+        if (theBindingResult.hasErrors()) {
             return "customer-form";
-        }else{
+        } else {
             return "processed-customer-form";
         }
 

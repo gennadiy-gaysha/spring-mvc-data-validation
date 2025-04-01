@@ -45,6 +45,16 @@
                 ></span>
             </div>
 
+            <div class="mb-3">
+                <label for="customerEmail" class="form-label">Customer email(*)</label>
+                <input type="email" th:field="*{email}" class="form-control"
+                       id="customerEmail" placeholder="Input customer email">
+                <span th:if="${#fields.hasErrors('email')}"
+                      th:errors="*{email}"
+                      class="text-danger"
+                ></span>
+            </div>
+
             <button type="submit" class="btn btn-primary mt-3">Submit</button>
         </form>
     </div>
